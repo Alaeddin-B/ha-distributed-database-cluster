@@ -28,8 +28,15 @@ graph TD
     db2 <==>|Galera Sync| db3
     db3 <==>|Galera Sync| db1
 
-    style VIP fill:#f9f,stroke:#333,stroke-width:2px
-    style db1 fill:#bbf,stroke:#333,stroke-width:2px
+%% High Contrast Styling
+    classDef blue fill:#bbf,stroke:#333,stroke-width:2px,color:#000
+    classDef pink fill:#f9f,stroke:#333,stroke-width:2px,color:#000
+    classDef white fill:#fff,stroke:#333,stroke-width:2px,color:#000
+
+    %% Apply Styles
+    class db1,db2,db3 blue
+    class VIP pink
+    class User white
 ```
 
 ### The Stack
