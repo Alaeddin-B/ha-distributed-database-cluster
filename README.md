@@ -146,6 +146,5 @@ Log excerpt showing connection recovery:
 
 ```plaintext
 [14:02:10.450] [SUCCESS] Connected to db1
-[14:02:10.950] [FAILURE] Connection Lost: 2003 (HY000): Can't connect to MySQL server
 [14:02:12.100] [SUCCESS] Connected to db2  <-- Recovery
 ```
