@@ -41,13 +41,20 @@ graph TD
 
 ### The Stack
 
-- **Replication Engine: MariaDB Galera** (Synchronous Multi-Master). Guarantees that a write is not confirmed until it is persisted across the cluster mesh.
+- **OS:** Debian GNU/Linux 12 (Bookworm)
+  - *Kernel:* Linux 6.1.0-31-amd64 (LTS)
 
-- **Cluster Orchestration: Pacemaker & Corosync**. Provides heartbeat monitoring and resource scheduling.
+- **Database:** MariaDB Server 10.11.14 (LTS)
+  - *Replication Provider:* Galera Cluster 4 (v26.4.23)
+  - *Configuration:* Synchronous Multi-Master, Row-Based Replication
 
-- **Traffic Routing: Floating Virtual IP (VIP)** via IPaddr2. Uses Gratuitous ARP to re-route client traffic instantly without requiring DNS propagation or load balancer reconfiguration.
+- **Orchestration:** High-Availability Cluster Stack
+  - *Manager:* Pacemaker 2.1.5
+  - *Messaging:* Corosync 3.1.7
+  - *Configuration Tool:* PCS 0.11.5
 
-- **Infrastructure: Debian 11** (Bullseye) on Bare Metal / VMs.
+- **Routing:** Floating Virtual IP (VIP) via IPaddr2
+  - *Mechanism:* Gratuitous ARP broadcast for <2s failover
 
 ## 🔧 Engineering Challenges Solved
 
