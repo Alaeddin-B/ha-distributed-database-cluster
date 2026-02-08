@@ -100,7 +100,8 @@ Infrastructure reliability is theoretical until tested.
 ├── tests/
 │   ├── chaos_monitor.py                # Python script for SLA verification & downtime measurement
 │   └── requirements.txt                # Python dependencies for chaos testing
-└── scripts/                            # Utility scripts (provisioning, automation)
+└── scripts/
+    └── LIVE_DEMO_COMMANDS.md           # Reference guide for live demo testing workflow
 ```
 
 ## 🚀 Reproduction Steps
@@ -135,6 +136,8 @@ Run the chaos monitor and simulate a node failure (e.g., `systemctl stop mariadb
 ```bash
 python3 tests/chaos_monitor.py
 ```
+
+For interactive testing and manual verification steps, see [`scripts/LIVE_DEMO_COMMANDS.md`](scripts/LIVE_DEMO_COMMANDS.md).
 
 ## 📊 Performance Evidence
 
